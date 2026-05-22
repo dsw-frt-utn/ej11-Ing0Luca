@@ -51,7 +51,7 @@ public class CasoList
 
     public void EliminarAlumnoPorPosicion(int posicion)
     {
-        if(posicion >= 0 || posicion < alumnos.Count)
+        if(posicion >= 0 && posicion < alumnos.Count)
         {
             alumnos.RemoveAt(posicion); 
         }
