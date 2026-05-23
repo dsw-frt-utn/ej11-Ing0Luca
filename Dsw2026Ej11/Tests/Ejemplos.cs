@@ -17,31 +17,31 @@ internal class Ejemplos
         CasoList lista = new CasoList();
 
         Alumno a1 = new Alumno(1, "Luca", 8.5);
-        Alumno a2 = new Alumno(2, "Emilia", 7.2);
-        Alumno a3 = new Alumno(3, "Juana", 9.1);
+        Alumno a2 = new Alumno(2, "Juana", 7.2);
+        Alumno a3 = new Alumno(3, "Emilia", 9.1);
 
-        //Agregar alumnos
+        
         lista.AgregarAlumno(a1);
         lista.AgregarAlumno(a2);
         lista.AgregarAlumno(a3);
 
-        //Mostrar alumnos
+        
         Console.WriteLine("LISTA DE ALUMNOS");
         foreach (Alumno alumno in lista.ObtenerLista())
         {
             Console.WriteLine(alumno);
         }
 
-        //Buscar alumno existente
-        Console.WriteLine("\nBUSCAR LUCAS");
-        Alumno encontrado = lista.BuscarPorNombre("Lucas");
+       
+        Console.WriteLine("\nBUSCAR LUCA");
+        Alumno encontrado = lista.BuscarPorNombre("Luca");
 
         if (encontrado != null)
         {
             Console.WriteLine(encontrado);
         }
 
-        //Buscar alumno inexistente
+        
         Console.WriteLine("\nBUSCAR PEDRO");
         Alumno noExiste = lista.BuscarPorNombre("Pedro");
 
@@ -50,17 +50,17 @@ internal class Ejemplos
             Console.WriteLine("No existe");
         }
 
-        //Eliminar alumno
+        
         lista.EliminarAlumno(a2);
 
-        Console.WriteLine("\nLISTA DESPUÉS DE ELIMINAR JUAN");
+        Console.WriteLine("\nLISTA DESPUÉS DE ELIMINAR JUANA");
 
         foreach (Alumno alumno in lista.ObtenerLista())
         {
             Console.WriteLine(alumno);
         }
 
-        //Eliminar primer elemento
+        
         lista.EliminarAlumnoPorPosicion(0);
 
         Console.WriteLine("\nLISTA DESPUÉS DE ELIMINAR PRIMER ELEMENTO");
@@ -82,15 +82,15 @@ internal class Ejemplos
         CasoDictionary diccionario = new CasoDictionary();
 
         Alumno a1 = new Alumno(1, "Luca", 8.5);
-        Alumno a2 = new Alumno(2, "Emilia", 7.2);
-        Alumno a3 = new Alumno(3, "Juana", 9.1);
+        Alumno a2 = new Alumno(2, "Juana", 7.2);
+        Alumno a3 = new Alumno(3, "Emilia", 9.1);
 
-        //Agregar alumnos
+        
         diccionario.AgregarAlumno(a1);
         diccionario.AgregarAlumno(a2);
         diccionario.AgregarAlumno(a3);
 
-        //Mostrar diccionario
+        
         Console.WriteLine("DICCIONARIO DE ALUMNOS");
 
         foreach (var item in diccionario.ObtenerDiccionario())
@@ -98,7 +98,7 @@ internal class Ejemplos
             Console.WriteLine(item.Value);
         }
 
-        //Buscar alumno existente
+       
         Console.WriteLine("\nBUSCAR LEGAJO 1");
 
         Alumno encontrado = diccionario.BuscarAlumno(1);
@@ -108,7 +108,6 @@ internal class Ejemplos
             Console.WriteLine(encontrado);
         }
 
-        //Buscar alumno inexistente
         Console.WriteLine("\nBUSCAR LEGAJO 10");
 
         Alumno noExiste = diccionario.BuscarAlumno(10);
@@ -118,10 +117,10 @@ internal class Ejemplos
             Console.WriteLine("No existe");
         }
 
-        //Eliminar alumno
+        
         diccionario.EliminarAlumno(2);
 
-        Console.WriteLine("\nDICCIONARIO DESPUÉS DE ELIMINAR");
+        Console.WriteLine("\nDICCIONARIO DESPUÉS DE ELIMINAR JUANA");
 
         foreach (var item in diccionario.ObtenerDiccionario())
         {
@@ -129,7 +128,6 @@ internal class Ejemplos
         }
     }
 
-    //Realizar una llamada a cada método definido en CasoLinq y mostar por consola según corresponda
     public static void EjemploLinq()
     {
         CasoLinq linq = new CasoLinq();
